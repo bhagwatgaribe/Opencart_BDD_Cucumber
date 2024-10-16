@@ -36,3 +36,38 @@ Feature: User Login
     And the user enters their registered email "bhagwat22garibe@gmail.com"
     And clicks on the Continue button
     Then the user should see a confirmation message "Success: Your password has been successfully updated."
+    
+  @Regression
+  Scenario Outline: Successful login with valid credentials using set of data
+    Given the user navigates to the login page
+    When the user enters a valid email "<email>" and password "<password>"
+    And clicks on the Login button
+    Then the user should see a page title as "My Account"
+			Examples:
+  			| email  												| password  |
+  			| bhagwat22garibe@gmail.com     | Bhag@123  |
+  			| varsha@gmail.com     					| varsha123 |
+  			| sham@gmail.com     					  | sham@123  |
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
+  			
